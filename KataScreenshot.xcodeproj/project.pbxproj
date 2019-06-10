@@ -43,6 +43,7 @@
 		6B9906CA22AE9DF90057F23F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B9906C922AE9DF90057F23F /* Preview Assets.xcassets */; };
 		6B9906CD22AE9DF90057F23F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9906CB22AE9DF90057F23F /* LaunchScreen.storyboard */; };
 		6B9906D822AE9DF90057F23F /* KataSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9906D722AE9DF90057F23F /* KataSwiftUITests.swift */; };
+		6B9906E122AEA0D10057F23F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915B3BF1E0C26BA0056AE6A /* UIColor.swift */; };
 		FC64759AD67A8E0D07F9DF6D /* Pods_KataScreenshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5509D4971E317467BCBF6C11 /* Pods_KataScreenshotTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -665,6 +666,7 @@
 				6B9906C122AE9DF80057F23F /* AppDelegate.swift in Sources */,
 				6B9906C322AE9DF80057F23F /* SceneDelegate.swift in Sources */,
 				6B9906C522AE9DF80057F23F /* ContentView.swift in Sources */,
+				6B9906E122AEA0D10057F23F /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
