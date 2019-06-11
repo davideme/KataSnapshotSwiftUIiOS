@@ -15,27 +15,42 @@ class ImageLoader: BindableObject {
 
     var image: Image? = nil {
         didSet {
-            didChange.send(image)
+            if oldValue != image {
+                didChange.send(image)
+            }
         }
     }
 
-    init(url: URL?) {
-        SDWebImageManager.shared.loadImage(with: url, progress: nil) { (image, _, _, _, _, _) in
-            self.image = image.map { Image(uiImage: $0) }
+    func load(url: URL?) -> Self {
+        guard image == nil else {
+            return self
+        }
+
+
+        SDWebImageManager.shared.loadImage(with: url, progress: nil) { (uiimage, _, _, _, _, _) in
+            self.image = uiimage.map { Image(uiImage: $0) }
+        }
+        return self
+    }
+}
+
+func loadImage(url: URL?) -> some Publisher {
+    return Publishers.Future { fullfill in
+        SDWebImageManager.shared.loadImage(with: url, progress: nil) { (uiimage, _, _, _, _, _) in
+            fullfill(Result<Image?, Never>.success(uiimage.map { Image(uiImage: $0) }))
         }
     }
 }
 
 struct SuperHeroesViewCell : View {
+    @ObjectBinding
+    var imageLoader = ImageLoader()
 
     let item: SuperHero
 
-    @State
-    var background: Image? = nil // Or placeholder
-
     var body: some View {
-        ZStack(alignment: .bottom) {
-            background?
+        return ZStack(alignment: .bottom) {
+            imageLoader.load(url: item.photo).image?
                 .resizable()
                 .aspectRatio(1.7769376181, contentMode: .fill)
                 .relativeHeight(1.0)
@@ -51,9 +66,11 @@ struct SuperHeroesViewCell : View {
             }.relativeWidth(1.0)
         }
         .frame(height: 163)
-        .onReceive(ImageLoader(url: item.photo).didChange) { newBackground in
-            self.background = newBackground
-        }
+//        .onReceive(imageLoader.load(url: item.photo).didChange) { newBackground in
+//            DispatchQueue.main.async {
+//                self.background = newBackground
+//            }
+//        }
     }
 
     private func gradient() -> some View {
