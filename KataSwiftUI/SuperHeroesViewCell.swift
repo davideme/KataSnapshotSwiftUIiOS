@@ -69,7 +69,7 @@ struct SuperHeroesViewCell : View {
 
 
 #if DEBUG
-let s = SuperHero(name: "Scarlet Witch",
+private let s = SuperHero(name: "Scarlet Witch",
           photo: URL(string: "https://i.annihil.us/u/prod/marvel/i/mg/9/b0/537bc2375dfb9.jpg"),
           isAvenger: true,
           description: "Scarlet Witch was born at the Wundagore base of the High Evolutionary, she and her twin "
