@@ -13,12 +13,6 @@ import Combine
 class SuperHeroesViewModel: BindableObject {
     let didChange = PassthroughSubject<SuperHeroesViewModel, Never>()
 
-    var isLoaded = false {
-        didSet {
-            didChange.send(self)
-        }
-    }
-
     var isLoading = true {
         didSet {
             didChange.send(self)
@@ -38,7 +32,6 @@ class SuperHeroesViewModel: BindableObject {
     }
 
     func load() {
-        isLoaded = true
         isLoading = true
         getSuperHeroes.execute { superHeroes in
             self.superHeroes = superHeroes

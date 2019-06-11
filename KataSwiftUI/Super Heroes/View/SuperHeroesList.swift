@@ -13,10 +13,7 @@ struct SuperHeroesList : View {
     var viewModel: SuperHeroesViewModel
 
     var body: some View {
-        if !viewModel.isLoaded {
-            viewModel.load()
-        }
-        return Group {
+        Group {
             if viewModel.superHeroes.isEmpty {
                 // Show Empty case
                     EmptyView()
@@ -26,6 +23,8 @@ struct SuperHeroesList : View {
                 }
                 .navigationBarTitle(Text("Kata Super Heroes"))
             }
+        }.onAppear {
+            self.viewModel.load()
         }
     }
 }

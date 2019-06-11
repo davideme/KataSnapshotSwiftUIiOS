@@ -16,7 +16,6 @@ class ImageLoader: BindableObject {
     var image: Image? = nil {
         didSet {
             if oldValue != image {
-                didChange.send(image)
             }
         }
     }
@@ -26,7 +25,6 @@ class ImageLoader: BindableObject {
             return self
         }
 
-
         SDWebImageManager.shared.loadImage(with: url, progress: nil) { (uiimage, _, _, _, _, _) in
             self.image = uiimage.map { Image(uiImage: $0) }
         }
@@ -34,7 +32,7 @@ class ImageLoader: BindableObject {
     }
 }
 
-func loadImage(url: URL?) -> some Publisher {
+func loadImage(url: URL?) ->  Publishers.Future<Image?, Never>{
     return Publishers.Future { fullfill in
         SDWebImageManager.shared.loadImage(with: url, progress: nil) { (uiimage, _, _, _, _, _) in
             fullfill(Result<Image?, Never>.success(uiimage.map { Image(uiImage: $0) }))
@@ -43,14 +41,14 @@ func loadImage(url: URL?) -> some Publisher {
 }
 
 struct SuperHeroesViewCell : View {
-    @ObjectBinding
-    var imageLoader = ImageLoader()
-
     let item: SuperHero
+
+    @State
+    var background: Image? = nil
 
     var body: some View {
         return ZStack(alignment: .bottom) {
-            imageLoader.load(url: item.photo).image?
+            background?
                 .resizable()
                 .aspectRatio(1.7769376181, contentMode: .fill)
                 .relativeHeight(1.0)
@@ -66,11 +64,11 @@ struct SuperHeroesViewCell : View {
             }.relativeWidth(1.0)
         }
         .frame(height: 163)
-//        .onReceive(imageLoader.load(url: item.photo).didChange) { newBackground in
-//            DispatchQueue.main.async {
-//                self.background = newBackground
-//            }
-//        }
+        .onReceive(loadImage(url: item.photo)) { newBackground in
+            DispatchQueue.main.async {
+                self.background = newBackground
+            }
+        }
     }
 
     private func gradient() -> some View {
