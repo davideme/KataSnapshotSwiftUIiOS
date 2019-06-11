@@ -15,8 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let window = UIWindow(frame: UIScreen.main.bounds)
-//        window.rootViewController = ServiceLocator().provideRootViewController()
-        window.rootViewController = UIHostingController(rootView: ContentView())
+        window.rootViewController = ServiceLocator().provideRootViewController()
         self.window = window
         configureWindow()
         configureNavigationBarStyle()

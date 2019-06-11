@@ -8,3 +8,7 @@ end
 target 'KataScreenshotTests' do
     pod 'iOSSnapshotTestCase'
 end
+
+target 'KataSwiftUI' do
+    pod 'SDWebImage'
+end
