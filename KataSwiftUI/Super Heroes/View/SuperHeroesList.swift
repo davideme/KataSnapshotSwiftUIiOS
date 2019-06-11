@@ -15,8 +15,7 @@ struct SuperHeroesList : View {
     var body: some View {
         Group {
             if viewModel.superHeroes.isEmpty {
-                // Show Empty case
-                    EmptyView()
+                LoadingSwiftView()
             } else {
                 List(viewModel.superHeroes.identified(by: \.name)) { superHero in
                     SuperHeroesViewCell(item: superHero)
@@ -26,6 +25,18 @@ struct SuperHeroesList : View {
         }.onAppear {
             self.viewModel.load()
         }
+    }
+}
+
+struct LoadingSwiftView: UIViewRepresentable {
+    func makeUIView(context: UIViewRepresentableContext<LoadingSwiftView>) -> LoadingView {
+        let loadingView = LoadingView()
+        loadingView.color = UIColor.loadingColor
+        return loadingView
+    }
+
+    func updateUIView(_ uiView: LoadingView, context: UIViewRepresentableContext<LoadingSwiftView>) {
+        uiView.isHidden = false
     }
 }
 
