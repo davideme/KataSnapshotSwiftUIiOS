@@ -26,7 +26,7 @@ class ServiceLocator {
 
     func provideSuperHeroDetailView(_ superHeroName: String) -> SuperHeroDetailView {
 //        viewController.presenter = provideSuperHeroDetailPresenter(viewController, superHeroName: superHeroName)
-        return SuperHeroDetailView()
+        return SuperHeroDetailView(item: sh)
     }
 //
 //    func provideSuperHeroDetailViewController(_ superHeroName: String) -> UIViewController {
