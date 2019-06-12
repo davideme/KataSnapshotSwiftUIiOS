@@ -17,10 +17,14 @@ struct SuperHeroesList : View {
             if viewModel.superHeroes.isEmpty {
                 LoadingSwiftView()
             } else {
-                List(viewModel.superHeroes.identified(by: \.name)) { superHero in
-                    SuperHeroesViewCell(item: superHero)
+                NavigationView {
+                    List(viewModel.superHeroes.identified(by: \.name)) { superHero in
+                        NavigationButton(destination: ServiceLocator.shared.provideSuperHeroDetailView(superHero.name)) {
+                            SuperHeroesViewCell(item: superHero)
+                        }
+                    }
+                    .navigationBarTitle(Text("Kata Super Heroes"))
                 }
-                .navigationBarTitle(Text("Kata Super Heroes"))
             }
         }.onAppear {
             self.viewModel.load()
