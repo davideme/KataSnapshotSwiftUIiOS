@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import KataScreenshot
+@testable import KataSwiftUI
 
 class SuperHeroMother {
     static func givenASuperHero(isAvenger: Bool) -> SuperHero {

@@ -17,7 +17,9 @@ class SnapshotTestCase: XCTestCase {
         SnapshotTesting.record = ProcessInfo.processInfo.environment["RECORD_MODE"] != nil
     }
 
-    func verify<V: View>(view: V) {
-        assertSnapshot(matching: view.body, as: .dump)
+    func verify<V: View>(view: V, file: StaticString = #file,
+                         testName: String = #function,
+                         line: UInt = #line) {
+        assertSnapshot(matching: view.body, as: .dump, file: file, testName: testName, line: line)
     }
 }

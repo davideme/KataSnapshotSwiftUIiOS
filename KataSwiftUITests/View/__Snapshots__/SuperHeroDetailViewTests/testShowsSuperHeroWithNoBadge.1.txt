@@ -1,0 +1,44 @@
+▿ _ModifiedContent<SubscriptionView<Future<Optional<Image>, Never>, _ModifiedContent<_AutoResultView<Group<ConditionalContent<LoadingSwiftView, IfLet<SuperHero, VStack<TupleView<(ZStack<TupleView<(Optional<_ModifiedContent<_ModifiedContent<Image, _AspectRatioLayout>, _ClipEffect<Rectangle>>>, Optional<_ModifiedContent<Image, _PaddingLayout>>)>>, _ModifiedContent<Text, _PaddingLayout>, _ModifiedContent<_ModifiedContent<Text, _EnvironmentKeyWritingModifier<Optional<Int>>>, _PaddingLayout>, Spacer)>>>>>>, _BackgroundModifier<Color>>>, _AppearanceActionModifier>
+  ▿ content: SubscriptionView<Future<Optional<Image>, Never>, _ModifiedContent<_AutoResultView<Group<ConditionalContent<LoadingSwiftView, IfLet<SuperHero, VStack<TupleView<(ZStack<TupleView<(Optional<_ModifiedContent<_ModifiedContent<Image, _AspectRatioLayout>, _ClipEffect<Rectangle>>>, Optional<_ModifiedContent<Image, _PaddingLayout>>)>>, _ModifiedContent<Text, _PaddingLayout>, _ModifiedContent<_ModifiedContent<Text, _EnvironmentKeyWritingModifier<Optional<Int>>>, _PaddingLayout>, Spacer)>>>>>>, _BackgroundModifier<Color>>>
+    - action: (Function)
+    ▿ content: _ModifiedContent<_AutoResultView<Group<ConditionalContent<LoadingSwiftView, IfLet<SuperHero, VStack<TupleView<(ZStack<TupleView<(Optional<_ModifiedContent<_ModifiedContent<Image, _AspectRatioLayout>, _ClipEffect<Rectangle>>>, Optional<_ModifiedContent<Image, _PaddingLayout>>)>>, _ModifiedContent<Text, _PaddingLayout>, _ModifiedContent<_ModifiedContent<Text, _EnvironmentKeyWritingModifier<Optional<Int>>>, _PaddingLayout>, Spacer)>>>>>>, _BackgroundModifier<Color>>
+      ▿ content: _AutoResultView<Group<ConditionalContent<LoadingSwiftView, IfLet<SuperHero, VStack<TupleView<(ZStack<TupleView<(Optional<_ModifiedContent<_ModifiedContent<Image, _AspectRatioLayout>, _ClipEffect<Rectangle>>>, Optional<_ModifiedContent<Image, _PaddingLayout>>)>>, _ModifiedContent<Text, _PaddingLayout>, _ModifiedContent<_ModifiedContent<Text, _EnvironmentKeyWritingModifier<Optional<Int>>>, _PaddingLayout>, Spacer)>>>>>>
+        ▿ content: _ModifiedContent<Group<ConditionalContent<LoadingSwiftView, IfLet<SuperHero, VStack<TupleView<(ZStack<TupleView<(Optional<_ModifiedContent<_ModifiedContent<Image, _AspectRatioLayout>, _ClipEffect<Rectangle>>>, Optional<_ModifiedContent<Image, _PaddingLayout>>)>>, _ModifiedContent<Text, _PaddingLayout>, _ModifiedContent<_ModifiedContent<Text, _EnvironmentKeyWritingModifier<Optional<Int>>>, _PaddingLayout>, Spacer)>>>>>, _PreferenceWritingModifier<NavigationBarTitleKey>>
+          ▿ content: Group<ConditionalContent<LoadingSwiftView, IfLet<SuperHero, VStack<TupleView<(ZStack<TupleView<(Optional<_ModifiedContent<_ModifiedContent<Image, _AspectRatioLayout>, _ClipEffect<Rectangle>>>, Optional<_ModifiedContent<Image, _PaddingLayout>>)>>, _ModifiedContent<Text, _PaddingLayout>, _ModifiedContent<_ModifiedContent<Text, _EnvironmentKeyWritingModifier<Optional<Int>>>, _PaddingLayout>, Spacer)>>>>>
+            ▿ _tree: Tree<_GroupContainer, ConditionalContent<LoadingSwiftView, IfLet<SuperHero, VStack<TupleView<(ZStack<TupleView<(Optional<_ModifiedContent<_ModifiedContent<Image, _AspectRatioLayout>, _ClipEffect<Rectangle>>>, Optional<_ModifiedContent<Image, _PaddingLayout>>)>>, _ModifiedContent<Text, _PaddingLayout>, _ModifiedContent<_ModifiedContent<Text, _EnvironmentKeyWritingModifier<Optional<Int>>>, _PaddingLayout>, Spacer)>>>>>
+              ▿ content: ConditionalContent<LoadingSwiftView, IfLet<SuperHero, VStack<TupleView<(ZStack<TupleView<(Optional<_ModifiedContent<_ModifiedContent<Image, _AspectRatioLayout>, _ClipEffect<Rectangle>>>, Optional<_ModifiedContent<Image, _PaddingLayout>>)>>, _ModifiedContent<Text, _PaddingLayout>, _ModifiedContent<_ModifiedContent<Text, _EnvironmentKeyWritingModifier<Optional<Int>>>, _PaddingLayout>, Spacer)>>>>
+                ▿ storage: Storage
+                  - trueContent: LoadingSwiftView
+              - root: _GroupContainer
+          ▿ modifier: _PreferenceWritingModifier<NavigationBarTitleKey>
+            ▿ value: Optional<TitleStorage>
+              ▿ some: TitleStorage
+                - displayMode: TitleDisplayMode.automatic
+                ▿ title: Text
+                  - modifiers: 0 elements
+                  ▿ storage: Storage
+                    - verbatim: "Mr. Clean"
+      ▿ modifier: _BackgroundModifier<Color>
+        ▿ alignment: Alignment
+          ▿ horizontal: HorizontalAlignment
+            ▿ key: AlignmentKey
+              - bits: 4590030128
+          ▿ vertical: VerticalAlignment
+            ▿ key: AlignmentKey
+              - bits: 4590030105
+        ▿ secondaryLayer: NamedColor(name: "backgroundColor", bundle: nil)
+          ▿ provider: ColorBox<NamedColor>
+            ▿ base: NamedColor
+              - bundle: Optional<NSBundle>.none
+              - name: "backgroundColor"
+    ▿ publisher: Future<Optional<Image>, Never>
+      ▿ lock: 0x00007fadba4107c0
+        - pointerValue: 140384130893760
+      ▿ result: Optional<Result<Optional<Image>, Never>>
+        ▿ some: Result<Optional<Image>, Never>
+          - success: Optional<Image>.none
+      - subscribers: Optional<OrderedCoatCheckBag<AnySubscriber<Optional<Image>, Never>>>.none
+  ▿ modifier: _AppearanceActionModifier
+    ▿ appear: Optional<() -> ()>
+      - some: (Function)
+    - disappear: Optional<() -> ()>.none
