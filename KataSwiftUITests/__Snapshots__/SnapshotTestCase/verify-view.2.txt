@@ -1,0 +1,11 @@
+▿ _ModifiedContent<Group<ConditionalContent<LoadingSwiftView, _ModifiedContent<NavigationView<_AutoResultView<List<Never, ForEach<IdentifierValuePairs<Array<SuperHero>, String>, HStack<NavigationButton<SuperHeroesViewCell, SuperHeroDetailView>>>>>>, _BackgroundModifier<Color>>>>, _AppearanceActionModifier>
+  ▿ content: Group<ConditionalContent<LoadingSwiftView, _ModifiedContent<NavigationView<_AutoResultView<List<Never, ForEach<IdentifierValuePairs<Array<SuperHero>, String>, HStack<NavigationButton<SuperHeroesViewCell, SuperHeroDetailView>>>>>>, _BackgroundModifier<Color>>>>
+    ▿ _tree: Tree<_GroupContainer, ConditionalContent<LoadingSwiftView, _ModifiedContent<NavigationView<_AutoResultView<List<Never, ForEach<IdentifierValuePairs<Array<SuperHero>, String>, HStack<NavigationButton<SuperHeroesViewCell, SuperHeroDetailView>>>>>>, _BackgroundModifier<Color>>>>
+      ▿ content: ConditionalContent<LoadingSwiftView, _ModifiedContent<NavigationView<_AutoResultView<List<Never, ForEach<IdentifierValuePairs<Array<SuperHero>, String>, HStack<NavigationButton<SuperHeroesViewCell, SuperHeroDetailView>>>>>>, _BackgroundModifier<Color>>>
+        ▿ storage: Storage
+          - trueContent: LoadingSwiftView
+      - root: _GroupContainer
+  ▿ modifier: _AppearanceActionModifier
+    ▿ appear: Optional<() -> ()>
+      - some: (Function)
+    - disappear: Optional<() -> ()>.none

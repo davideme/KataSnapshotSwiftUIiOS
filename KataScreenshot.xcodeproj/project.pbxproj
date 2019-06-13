@@ -43,6 +43,9 @@
 		6B28431A22B16F1700EEAE7C /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B28431922B16F1700EEAE7C /* ImageLoader.swift */; };
 		6B28431B22B244A200EEAE7C /* GetSuperHeroByName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915B3CA1E0C27180056AE6A /* GetSuperHeroByName.swift */; };
 		6B28431D22B244CC00EEAE7C /* SuperHeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B28431C22B244CC00EEAE7C /* SuperHeroDetailViewModel.swift */; };
+		6B28432022B2542A00EEAE7C /* SuperHeroesViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B28431F22B2542A00EEAE7C /* SuperHeroesViewTests.swift */; };
+		6B28432122B2545D00EEAE7C /* MockSuperHeroesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915B3E81E0C292D0056AE6A /* MockSuperHeroesRepository.swift */; };
+		6B28432322B2578000EEAE7C /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B28432222B2578000EEAE7C /* SnapshotTestCase.swift */; };
 		6B61992222AEA56B00EB02AC /* SuperHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915B3C51E0C27030056AE6A /* SuperHero.swift */; };
 		6B61992322AEB5C500EB02AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4915B3971E0C25870056AE6A /* Assets.xcassets */; };
 		6B9906C122AE9DF80057F23F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9906C022AE9DF80057F23F /* AppDelegate.swift */; };
@@ -51,7 +54,6 @@
 		6B9906C722AE9DF90057F23F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B9906C622AE9DF90057F23F /* Assets.xcassets */; };
 		6B9906CA22AE9DF90057F23F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B9906C922AE9DF90057F23F /* Preview Assets.xcassets */; };
 		6B9906CD22AE9DF90057F23F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9906CB22AE9DF90057F23F /* LaunchScreen.storyboard */; };
-		6B9906D822AE9DF90057F23F /* KataSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9906D722AE9DF90057F23F /* KataSwiftUITests.swift */; };
 		6B9906E122AEA0D10057F23F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915B3BF1E0C26BA0056AE6A /* UIColor.swift */; };
 		6B9906E222AEA2680057F23F /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915B3DD1E0C27C10056AE6A /* ServiceLocator.swift */; };
 		6B9906E322AEA2830057F23F /* KataSuperHeroesStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DCE9E21F8C0A1009C0D77 /* KataSuperHeroesStoryboard.swift */; };
@@ -59,6 +61,7 @@
 		6BC359C022AFF52400026CBA /* SuperHeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC359BF22AFF52400026CBA /* SuperHeroesViewModel.swift */; };
 		6BC359C122AFF59F00026CBA /* GetSuperHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915B3CB1E0C27180056AE6A /* GetSuperHeroes.swift */; };
 		6BC359C222AFF7CA00026CBA /* SuperHeroesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4915B3C61E0C27030056AE6A /* SuperHeroesRepository.swift */; };
+		77A73A27C826BCFD15AFB41C /* Pods_KataSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81952D656EBED59BBF3C354B /* Pods_KataSwiftUITests.framework */; };
 		FC64759AD67A8E0D07F9DF6D /* Pods_KataScreenshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5509D4971E317467BCBF6C11 /* Pods_KataScreenshotTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		1D782A2F87D5380C012EA891 /* Pods-KataScreenshotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataScreenshotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KataScreenshotTests/Pods-KataScreenshotTests.release.xcconfig"; sourceTree = "<group>"; };
+		24060A34317A45A3DE90C97E /* Pods-KataSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataSwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KataSwiftUITests/Pods-KataSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		334026022727D242CE340D98 /* Pods_KataSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KataSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4226A96F0DDBC63CB44010CB /* Pods-KataScreenshot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataScreenshot.release.xcconfig"; path = "Pods/Target Support Files/Pods-KataScreenshot/Pods-KataScreenshot.release.xcconfig"; sourceTree = "<group>"; };
 		4915B38D1E0C25870056AE6A /* KataScreenshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KataScreenshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,9 +122,12 @@
 		4A529D7E99EF55AFA1218129 /* Pods-KataScreenshotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataScreenshotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KataScreenshotTests/Pods-KataScreenshotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C52E23864CDE6FC17800AB6 /* Pods_KataScreenshot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KataScreenshot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5509D4971E317467BCBF6C11 /* Pods_KataScreenshotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KataScreenshotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B4857D4C96A7A1F18113399 /* Pods-KataSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataSwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KataSwiftUITests/Pods-KataSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6B0CBDAE22B01BC700B74A3C /* SuperHeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetailView.swift; sourceTree = "<group>"; };
 		6B28431922B16F1700EEAE7C /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		6B28431C22B244CC00EEAE7C /* SuperHeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroDetailViewModel.swift; sourceTree = "<group>"; };
+		6B28431F22B2542A00EEAE7C /* SuperHeroesViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesViewTests.swift; sourceTree = "<group>"; };
+		6B28432222B2578000EEAE7C /* SnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCase.swift; sourceTree = "<group>"; };
 		6B9906BE22AE9DF80057F23F /* KataSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KataSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B9906C022AE9DF80057F23F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B9906C222AE9DF80057F23F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,11 +137,11 @@
 		6B9906CC22AE9DF90057F23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B9906CE22AE9DF90057F23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B9906D322AE9DF90057F23F /* KataSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KataSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B9906D722AE9DF90057F23F /* KataSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataSwiftUITests.swift; sourceTree = "<group>"; };
 		6B9906D922AE9DF90057F23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BC359BA22AFC11F00026CBA /* SuperHeroesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesList.swift; sourceTree = "<group>"; };
 		6BC359BF22AFF52400026CBA /* SuperHeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesViewModel.swift; sourceTree = "<group>"; };
 		7217014BF3DB25606C46B6B0 /* Pods-KataSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataSwiftUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KataSwiftUI/Pods-KataSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		81952D656EBED59BBF3C354B /* Pods_KataSwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KataSwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D15EB0AC3D833AA2F63CBCB6 /* Pods-KataScreenshot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataScreenshot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KataScreenshot/Pods-KataScreenshot.debug.xcconfig"; sourceTree = "<group>"; };
 		F7263FB6BBBC568E40485682 /* Pods-KataSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataSwiftUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-KataSwiftUI/Pods-KataSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A73A27C826BCFD15AFB41C /* Pods_KataSwiftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +354,14 @@
 			name = "Table View";
 			sourceTree = "<group>";
 		};
+		6B28431E22B2541C00EEAE7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B28431F22B2542A00EEAE7C /* SuperHeroesViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6B9906BF22AE9DF80057F23F /* KataSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,8 +387,9 @@
 		6B9906D622AE9DF90057F23F /* KataSwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6B9906D722AE9DF90057F23F /* KataSwiftUITests.swift */,
+				6B28431E22B2541C00EEAE7C /* View */,
 				6B9906D922AE9DF90057F23F /* Info.plist */,
+				6B28432222B2578000EEAE7C /* SnapshotTestCase.swift */,
 			);
 			path = KataSwiftUITests;
 			sourceTree = "<group>";
@@ -412,6 +429,7 @@
 				4C52E23864CDE6FC17800AB6 /* Pods_KataScreenshot.framework */,
 				5509D4971E317467BCBF6C11 /* Pods_KataScreenshotTests.framework */,
 				334026022727D242CE340D98 /* Pods_KataSwiftUI.framework */,
+				81952D656EBED59BBF3C354B /* Pods_KataSwiftUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -425,6 +443,8 @@
 				1D782A2F87D5380C012EA891 /* Pods-KataScreenshotTests.release.xcconfig */,
 				7217014BF3DB25606C46B6B0 /* Pods-KataSwiftUI.debug.xcconfig */,
 				F7263FB6BBBC568E40485682 /* Pods-KataSwiftUI.release.xcconfig */,
+				24060A34317A45A3DE90C97E /* Pods-KataSwiftUITests.debug.xcconfig */,
+				5B4857D4C96A7A1F18113399 /* Pods-KataSwiftUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -494,9 +514,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B9906DF22AE9DF90057F23F /* Build configuration list for PBXNativeTarget "KataSwiftUITests" */;
 			buildPhases = (
+				50FB33B7F3E2CBB94B2A8E47 /* [CP] Check Pods Manifest.lock */,
 				6B9906CF22AE9DF90057F23F /* Sources */,
 				6B9906D022AE9DF90057F23F /* Frameworks */,
 				6B9906D122AE9DF90057F23F /* Resources */,
+				4EABF9574303A331217F7808 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -619,6 +641,46 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-KataScreenshot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EABF9574303A331217F7808 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KataSwiftUITests/Pods-KataSwiftUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapshotTesting/SnapshotTesting.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapshotTesting.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KataSwiftUITests/Pods-KataSwiftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50FB33B7F3E2CBB94B2A8E47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KataSwiftUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -786,7 +848,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B9906D822AE9DF90057F23F /* KataSwiftUITests.swift in Sources */,
+				6B28432022B2542A00EEAE7C /* SuperHeroesViewTests.swift in Sources */,
+				6B28432122B2545D00EEAE7C /* MockSuperHeroesRepository.swift in Sources */,
+				6B28432322B2578000EEAE7C /* SnapshotTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1049,8 +1113,8 @@
 		};
 		6B9906DC22AE9DF90057F23F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24060A34317A45A3DE90C97E /* Pods-KataSwiftUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1074,8 +1138,8 @@
 		};
 		6B9906DD22AE9DF90057F23F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B4857D4C96A7A1F18113399 /* Pods-KataSwiftUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

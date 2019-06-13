@@ -12,3 +12,7 @@ end
 target 'KataSwiftUI' do
     pod 'SDWebImage'
 end
+
+target 'KataSwiftUITests' do
+  pod 'SnapshotTesting', '~> 1.5'
+end
