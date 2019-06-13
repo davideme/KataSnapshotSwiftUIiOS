@@ -38,9 +38,4 @@ class SuperHeroesViewModel: BindableObject {
             self.isLoading = false
         }
     }
-
-//    func itemWasTapped(_ item: SuperHero) {
-//        let superHeroDetailViewController = ServiceLocator().provideSuperHeroDetailViewController(item.name)
-//        ui?.openSuperHeroDetailScreen(superHeroDetailViewController)
-//    }
 }

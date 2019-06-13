@@ -10,33 +10,45 @@
 import SwiftUI
 
 struct SuperHeroDetailView : View {
-    let item: SuperHero
+    @ObjectBinding
+    var viewModel: SuperHeroDetailViewModel
 
     @State
     var heroImage: Image? = nil
 
     var body: some View {
-        return VStack(alignment: .leading) {
-            ZStack(alignment: .bottomTrailing) {
-                heroImage?
-                    .resizable()
-                    .aspectRatio(1.7769376181, contentMode: .fill)
-                    .relativeWidth(1.0)
-                    .clipped()
-                if item.isAvenger {
-                    Image("ic_avenger_badge")
-                        .padding()
+        return Group {
+            if viewModel.isLoading {
+                LoadingSwiftView()
+            } else {
+                IfLet(viewModel.superHero) { (item:SuperHero) in
+                    VStack(alignment: .leading) {
+                        ZStack(alignment: .bottomTrailing) {
+                            self.heroImage?
+                                .resizable()
+                                .aspectRatio(1.7769376181, contentMode: .fill)
+                                .clipped()
+                            if item.isAvenger {
+                                Image("ic_avenger_badge")
+                                    .padding()
+                            }
+                        }
+                        Text(item.name).color(.white).padding()
+                        Text(item.description).color(.white).lineLimit(nil).padding()
+                        Spacer()
+                    }
                 }
             }
-            Text(item.name).color(.white).padding()
-            Text(item.description).color(.white).lineLimit(nil).padding()
-            Spacer()
-        }
-        .background(Color("backgroundColor"))
-        .onReceive(loadImage(url: item.photo)) { newHeroImage in
-            DispatchQueue.main.async {
-                self.heroImage = newHeroImage
             }
+            .navigationBarTitle(Text(viewModel.title))
+            .background(Color("backgroundColor"))
+            .onReceive(loadImage(url: viewModel.superHero?.photo)) { newHeroImage in
+                DispatchQueue.main.async {
+                    self.heroImage = newHeroImage
+                }
+            }
+            .onAppear {
+                self.viewModel.load()
         }
     }
 }
@@ -47,4 +59,23 @@ struct SuperHeroDetailView : View {
 //    }
 //}
 #endif
+
+
+struct IfLet<T, Out: View>: View {
+    let value: T?
+    let produce: (T) -> Out
+
+    init(_ value: T?, produce: @escaping (T) -> Out) {
+        self.value = value
+        self.produce = produce
+    }
+
+    var body: some View {
+        Group {
+            if value != nil {
+                produce(value!)
+            }
+        }
+    }
+}
 
